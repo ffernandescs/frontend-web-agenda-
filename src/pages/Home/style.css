@@ -228,7 +228,7 @@ table tbody tr td {
 @media all and (max-width: 800px) {
     .formAdd {
         height: 100vh;
-        border-radius: 0px;
+        border-radius: 0pxs;
     }
 
     .textBtn {
