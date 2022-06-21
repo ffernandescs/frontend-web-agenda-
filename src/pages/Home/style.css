@@ -169,7 +169,19 @@ table tbody tr td {
     align-items: center;
     justify-content: center;
     transition: all .3s ease-in-out;
+    overflow: hidden;
 }
+
+.containerTabela {
+    height: calc(100vh - 250px);
+
+    overflow-x: hidden;
+}
+
+.tabela  {
+    overflow: hidden;
+}
+
 
 .adicionarContact.active {
     top: 0;
