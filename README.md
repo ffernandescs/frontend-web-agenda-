@@ -48,10 +48,6 @@ A pagina incial so ira funcionar caso o token esteja no salvo no Browser, caso c
  A pagina inicial ira listar todos os contatos em uma tabela inserida, foi incrementado um botão para que seja possivel crescentar novos contatos
  
  <img src="https://uploaddeimagens.com.br/images/003/910/014/original/06.png?1655809365">
-
-### Pagina inicial, a mesma ira listar os dados que constam no banco de dados do MongoDB, ao adicionar contatos, automaticamente sera inserido na tela pricipal
-
- <img src="https://uploaddeimagens.com.br/images/003/910/015/full/07.png?1655809477">
  
  ### Adicionar novos contatos, função que ira listar estes novos contatos na pagina inicial
  
