@@ -1,8 +1,7 @@
 import { Table } from 'reactstrap'
 import React, { useState, useEffect, useContext} from 'react'
 import { AuthContext } from '../../contexts/auth'
-import { Link } from 'react-router-dom'
-import { FaHome, FaUserFriends, FaUserAlt, FaBars } from 'react-icons/fa'
+import { FaHome, FaUserFriends, FaUserAlt, FaBars, FaTrashAlt } from 'react-icons/fa'
 import { getUser, addContato, destroyContato } from '../../services/api'
 
 import Nav from './Nav'
@@ -48,8 +47,11 @@ const Home = () => {
 
     const handleAddContato = (e) => {
         e.preventDefault()
-
         addContato(name, email, sobrenome, dateNasc, logradouro, fone)
+
+        setTimeout(function () {
+            window.location.reload();
+        }, 2000)
         loadData()
     }
 
@@ -76,24 +78,8 @@ const Home = () => {
                         <li className='textLink'>
                             <div className="textMenu">
                                 <div className='titleMenu'>
-                                    <FaHome/>
-                                    <span>Inicio</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li className='textLink'>
-                            <div className="textMenu">
-                                <div className='titleMenu'>
                                     <FaUserFriends/>
                                     <span>Contatos</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li className='textLink'>
-                            <div className="textMenu">
-                                <div className='titleMenu'>
-                                    <FaUserAlt/>
-                                    <span>Usuarios</span>
                                 </div>
                             </div>
                         </li>
@@ -107,36 +93,43 @@ const Home = () => {
                         <button onClick={btnMenuAdd}>Adicionar</button>
                     </div>
                     <div className="containerTabela">
-                    <Table className='tabela responsive' striped bordered hover>
-                        <thead>
-                            <tr>
-                                <th>Nome</th>
-                                <th>SobreNome</th>
-                                <th>Data de Nascimento</th>
-                                <th>Email</th>
-                                <th>Endereço</th>
-                                <th>Telefone</th>
-                                <th>Editar</th>
-                                <th>Salva</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                contatos.map((contato) => (
-                                    <tr className='todos' key={contato._id}>
-                                        <td>{contato.name}</td>
-                                        <td>{contato.sobrenome}</td>
-                                        <td>{contato.dateNasc}</td>
-                                        <td>{contato.email}</td>
-                                        <td>{contato.logradouro}</td>
-                                        <td>{contato.fone}</td>
-                                        <td>BOTAO</td>
-                                        <td onClick={() => handleDestroyContato(contatos)}>BOTAO</td>
-                                    </tr>
-                                ))
-                            }
-                        </tbody>
-                    </Table>
+                        <Table className='tabela responsive' striped bordered hover>
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th data-title="name">Nome</th>
+                                    <th data-title="sobrenome">SobreNome</th>
+                                    <th data-title="data">Data de Nascimento</th>
+                                    <th data-title="email">Email</th>
+                                    <th data-title="end">Endereço</th>
+                                    <th data-title="tel">Telefone</th>
+                                    <th data-title="">Salva</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    contatos.map((contato) => (
+                                        <tr className='todos' key={contato._id}>
+                                            <td>{contato.name}</td>
+                                            <td>{contato.sobrenome}</td>
+                                            <td>{contato.dateNasc}</td>
+                                            <td>{contato.email}</td>
+                                            <td>{contato.logradouro}</td>
+                                            <td>{contato.fone}</td>
+                                            <td className='btnApagar'>
+                                                <FaTrashAlt 
+                                                onClick={() => handleDestroyContato(contatos)}
+                                                />
+                                                <button 
+                                                onClick={() => handleDestroyContato(contatos)}>
+                                                    Apagar
+                                                </button>
+                                            
+                                            </td>
+                                        </tr>
+                                    ))
+                                }
+                            </tbody>
+                        </Table>
                     </div>
                     <div className={abaAddContato ? "adicionarContact active" : "adicionarContact"}>
                         <form action className='formAdd'>
@@ -148,7 +141,9 @@ const Home = () => {
                                 name='name'
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
-                                placeholder='Digite seu nome' />
+                                placeholder='Digite seu nome' 
+                                required
+                                />
                             </div>
                             <div className='campos'>
                                 <label htmlFor="sobrenome"></label>

@@ -27,7 +27,6 @@
 header {
     display: flex;
     width: 100%;
-
 }
 
 .topPage {
@@ -41,6 +40,7 @@ header {
     width: 100%;
     height: 100vh;
     background-color: #070B22;
+    transition: 0.5s ease-in-out;
 }
 
 .sidebar.active {
@@ -105,9 +105,6 @@ header {
 }
 
 .containerTable {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
     width: 100%;
     padding: 20px;
@@ -134,53 +131,32 @@ header {
     background-color: #0d396b;
 }
 
-.containerTabela {
-    max-height: 90vh;
-    overflow: hidden;
-}
 
-.table {
-    border-collapse:collapse;
-}
-
-.tabela {
-    display: block;
-    width: 100%;
-    max-height: calc(100vh - 230px);
-    border-spacing: 2px;        
-    border-collapse: collapse;
-    overflow-x: hidden;
-}
-
-.tabela thead {
+table tbody tr td {
     position: relative;
-    width: 100%;
-    background-color: #333;
 }
 
-.tabela thead {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    
+
+
+.btnApagar {
+    text-align: center;
+    cursor: pointer;
 }
 
-.tabela tbody {
-    position: relative;
-    background-color: #fff;
+.btnApagar svg {
+    color: #0d396b;
+    font-size: 25px;
+    transform: scale(1);
+    transition: .3s ease;
 }
 
-.tabela thead tr th {
-    text-align: left;
-    color: #fff;
+.btnApagar svg:hover {
+    color: #194c86;
+    transform: scale(1.2);
 }
 
-.tabela th,
-.tabela td {
-    padding: 0px;
-    width: auto;
-    text-align: left;
-
+.btnApagar button {
+    display: none;
 }
 
 .adicionarContact {
@@ -196,6 +172,7 @@ header {
 
 .adicionarContact.active {
     right: 0;
+    background-color: rgba(0, 0, 0, 0.394);
 }
 
 .tabela .apagar {
@@ -238,6 +215,95 @@ header {
 }
 
 .formAdd .acoes button {
+    font-size: 18px;
     background-color: #0D437F;
     margin: 20px 50px;
+}
+
+.formAdd .acoes button:hover {
+    background-color: #3c73b1;
+}
+
+
+@media all and (max-width: 800px) {
+    .formAdd {
+        height: 100vh;
+        border-radius: 0px;
+    }
+
+    .textBtn {
+        padding: 20px 0;
+    }
+
+    .containerTabela {
+        height: calc(100vh - 230px);
+        overflow-x: hidden;
+    }
+
+    tbody td {
+        display: block;
+    }
+
+    .tabela  {
+        height: 200px;
+        overflow: scroll;
+    }
+ 
+
+    table tbody tr td:before {
+        content: attr(data-title);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        color: rebeccapurple;
+        width: 100px;
+        height: 100px;
+        z-index: 50;
+        opacity: 1;
+    }
+
+    table thead {
+        position: absolute;
+        display: none;
+        overflow-y: scroll;
+    }
+
+    table {
+        border: none;
+    }
+
+    tbody {
+                height: 200px;
+        overflow: scroll;
+
+    }
+    
+    tbody tr {
+        position: relative;
+        margin-bottom: 10px;
+        display: block;
+        border: 1px solid #dad6eb;
+    }
+
+    .btnApagar button  {
+        display: block;
+        width: 100%;
+        background-color: #0d396b;
+        padding: 10px;
+        color: #FFF;
+        font-size: 16px;
+        border-radius: 25px;
+        border: none;
+    }
+
+    .btnApagar svg {
+        display: none;
+    }
+
+    table tbody tr td {
+        display: block;
+        text-align: right;
+    }
+
 }

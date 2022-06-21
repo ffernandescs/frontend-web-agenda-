@@ -2,6 +2,8 @@ import React, { useState, useContext } from 'react';
 
 import { AuthContext } from '../../contexts/auth';
 
+import Image from '../../components/img/image.jpg'
+
 
 import './style.css'
 
@@ -18,13 +20,14 @@ import './style.css'
     }
 
     return (
-        <div className="container">
+        <div className="containerGeral">
             <div className="containerLogin">
                 <div className="infoLogin">
+                    <h1>WebAgenda</h1>
+                    <img src={Image} alt="" />
                 </div>
                 <form className="form">
-                    <p>{String(authenticated)}</p>
-                    <p>{String(password)}</p>
+                    <h1>Faça seu login</h1>
                     <div className="cpLogin">
                         <label htmlFor="usuario">Usuario</label>
                         <input 
