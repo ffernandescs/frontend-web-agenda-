@@ -1,0 +1,242 @@
+.containerMain {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 2rem;
+    font-size: 80px;
+    color: red;
+}
+
+.btnMenuResponse {
+    font-size: 25px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    width: 100%;
+
+}
+
+.topPage {
+    width: 100%;
+    padding: 20px;
+    background-color: #070B22;
+}
+
+.sidebar {
+    max-width: 80px;
+    width: 100%;
+    height: 100vh;
+    background-color: #070B22;
+}
+
+.sidebar.active {
+    max-width: 250px;
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+    padding: 50px 0;
+}
+
+.menu ul {
+    padding: 0;
+}
+
+.textLink {
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 0;
+    transition: all 0.3s ease-in;
+}
+
+.textLink:hover {
+    background-color: #243d46;
+}
+
+.textMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 25px;
+    cursor: pointer;
+   
+}
+
+
+
+.titleMenu {
+    display: flex;
+    align-items: center;
+}
+
+.titleMenu span {
+    font-size: 18px;
+    margin-left: 15px;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.sidebar.active .titleMenu span {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.titleMenu svg {
+    font-size: 25px;
+}
+
+.containerTable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;
+}
+
+.textBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 50px;
+}
+
+.textBtn button {
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    background-color: #0D437F;
+    border-radius: 5px;
+    border: none;
+}
+
+.textBtn button:hover {
+    background-color: #0d396b;
+}
+
+.containerTabela {
+    max-height: 90vh;
+}
+
+.table {
+    border-collapse:collapse;
+}
+
+.tabela {
+    display: block;
+    width: 100%;
+    max-height: calc(100vh - 200px);
+    border-spacing: 2px;        
+    border-collapse: collapse;
+    overflow-x: hidden;
+}
+
+.tabela thead {
+    position: relative;
+    width: 100%;
+    background-color: #333;
+}
+
+.tabela thead {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    
+}
+
+.tabela tbody {
+    position: relative;
+}
+
+.tabela thead tr th {
+    text-align: left;
+    color: #fff;
+}
+
+.tabela th,
+.tabela td {
+    padding: 0px;
+    width: auto;
+    text-align: left;
+
+}
+
+.adicionarContact {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 1000%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.adicionarContact.active {
+    right: 0;
+}
+
+.tabela .apagar {
+    cursor: pointer;
+    color: red;
+}
+
+.formAdd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    height: 90vh;
+    z-index: 100;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.campos {
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.campos input {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    outline: 0;
+    padding-left: 10px;
+}
+
+.formAdd .acoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.formAdd .acoes button {
+    background-color: #0D437F;
+    margin: 20px 50px;
+}
