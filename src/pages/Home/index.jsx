@@ -51,7 +51,6 @@ const Home = () => {
 
         addContato(name, email, sobrenome, dateNasc, logradouro, fone)
         loadData()
-        window.location.reload()
     }
 
     const handleDestroyContato = async (contatos) => {
