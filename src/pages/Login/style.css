@@ -93,6 +93,7 @@
     padding: 15px;
     cursor: pointer;
     transition: all .3s ease-in-out;
+    margin: 20px;
 }
 
 .acoes button:hover {
