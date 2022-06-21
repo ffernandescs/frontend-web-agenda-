@@ -26,7 +26,6 @@ export const AuthProvider = ({ children }) => {
     const login = async (email, password) => {
     const response = await createSession(email, password)
 
-    console.log('login', (email, password))
 
     const loggedUser = response.data.user
     const token = response.data.token
@@ -41,7 +40,6 @@ export const AuthProvider = ({ children }) => {
     }
 
     const logout = () => {
-        console.log('logout')
         localStorage.removeItem('user')
         localStorage.removeItem('token')
         api.defaults.headers.Authorization = null

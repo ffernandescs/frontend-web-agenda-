@@ -30,13 +30,12 @@ const Home = () => {
         logout()
     }
 
-    const userId = '62b12ab24cd79bc60fba302f'
+    const userId = '62b167786934352eae099fa6'
 
     const loadData = async (query = '') => {
         const response = await getUser(userId)
         const data = response.data
         setContatos(data)
-        console.log(data[0]._id)
     }
 
     const [name, setName] = useState('')

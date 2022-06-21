@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL: "https://web-agenda.herokuapp.com"
+    baseURL: "http://localhost:5000"
 })
 
 export const createSession = async (email, password) => {
@@ -15,7 +15,7 @@ export const getUser = async (userId, query) => {
 }
 
 export const addContato = async (name, email, sobrenome, dateNasc, logradouro, fone) => {
-    return api.post('/users/62b12ab24cd79bc60fba302f/contatos', {name, email, sobrenome, dateNasc, logradouro, fone})
+    return api.post('/users/62b167786934352eae099fa6/contatos', {name, email, sobrenome, dateNasc, logradouro, fone})
 }
 
 export const destroyContato = async (userId, id) => {
@@ -24,6 +24,6 @@ export const destroyContato = async (userId, id) => {
 }
 
 export const updateContato = async (name, email, sobrenome, dateNasc, logradouro, fone) => {
-    return api.put('/users/62b12ab24cd79bc60fba302f/contatos', {name, email, sobrenome, dateNasc, logradouro, fone})
+    return api.put('/users/62b167786934352eae099fa6/contatos', {name, email, sobrenome, dateNasc, logradouro, fone})
 }
 
