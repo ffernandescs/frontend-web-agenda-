@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Projeto Fron End - WebAgenda
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+💻 Projeto Desafio deste projeto que se resume em uma aplicação de uma webagenda, onde o usuario tem como a finalidade inserir dados como:
 
-## Available Scripts
+```
+  - Nome
+  - Sobrenome
+  - Data de Nascimento
+  - Email
+  - Endereço
+  - Telefone
+ ```
+ 
+ Projeto Criado com React utilizando suas dependencias e dependencias de terceiros para criação da aplicação.
+ ```
+ A Primeira pagina consistem na pagina de Login, onde o usuario falar login e sua autenticação ira passar por um processo de criptografia, onde toda essa confiuração
+ foi foita no Projeto "backend-agenda-web" que se encontra em meu Repositorio no GitHub.
+ ```
+ Para este projeto utlizei dependecias como:
+ ```
+  - React-Icones- para Estruturar o ambientes com incones
+  - React-router-dom, para realizar todo roteamento das paginas.
+  - Utilizei as ferramentas AuthContex e useContex para iniciar um preocesso de validação da senha,
+tambem utilizei a funcção localstorage para salvar o token do usuario em sua maquina.
+  - Este processo de validação teve sua confiração de Token para expirar com 7 diass.
+```
 
-In the project directory, you can run:
+Para rodar este projeto em ambiente de desenvolvimento, basta instalar as dependencias que se encontram no package.json
 
-### `npm start`
+Foram Criado a tela pricipal onde ira constar uma tabela que ira listar todos os contatos inseridos no MongoDB,
+foi incrementado um botao para iniciar um preenchimento de um formulario que ira adicionar novos contatos e em seguida ja sera listados.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#Pagina de Login:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Para acessar a Pagina de Login, bastar informar os seguintes usuarios:
+```
+  - Usuario: web@teste.com
+  - Senha: 123456
+ ```
 
-### `npm test`
+Este login automaticamente fica com o token salvo no localStorage do navegador, e tem sua expiração em 7 dias.
+A pagina incial so ira funcionar caso o token esteja no salvo no Browser, caso contrario automaticamente a pagina redireciona para a pagina de Login.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ <img src="https://uploaddeimagens.com.br/images/003/910/013/full/05.png?1655809266">
+ 
+ ###Pagina inicial
+ 
+ A pagina inicial ira listar todos os contatos em uma tabela inserida, foi incrementado um botão para que seja possivel crescentar novos contatos
+ 
+ <img src="https://uploaddeimagens.com.br/images/003/910/014/original/06.png?1655809365">
 
-### `npm run build`
+### Pagina inicial, a mesma ira listar os dados que constam no banco de dados do MongoDB, ao adicionar contatos, automaticamente sera inserido na tela pricipal
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ <img src="https://uploaddeimagens.com.br/images/003/910/015/full/07.png?1655809477">
+ 
+ ### Adicionar novos contatos, função que ira listar estes novos contatos na pagina inicial
+ 
+  <img src="https://uploaddeimagens.com.br/images/003/910/015/full/07.png?1655809477">
+  
+  
+  #Conclusão.
+  
+  Estou concluindo este projeto que foi um grande desafiador para mim. A cada projeto vivencio novas experiencias e irei adiquirindo novas oportunidades, espero que gostem e estarei disposição de todos para quaisquer eventualidades.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
