@@ -136,6 +136,7 @@ header {
 
 .containerTabela {
     max-height: 90vh;
+    overflow: hidden;
 }
 
 .table {
@@ -145,7 +146,7 @@ header {
 .tabela {
     display: block;
     width: 100%;
-    max-height: calc(100vh - 200px);
+    max-height: calc(100vh - 230px);
     border-spacing: 2px;        
     border-collapse: collapse;
     overflow-x: hidden;
@@ -160,12 +161,13 @@ header {
 .tabela thead {
     position: sticky;
     top: 0;
-    z-index: 50;
+    z-index: 1;
     
 }
 
 .tabela tbody {
     position: relative;
+    background-color: #fff;
 }
 
 .tabela thead tr th {
@@ -198,7 +200,6 @@ header {
 
 .tabela .apagar {
     cursor: pointer;
-    color: red;
 }
 
 .formAdd {
