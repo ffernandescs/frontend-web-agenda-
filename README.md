@@ -11,7 +11,11 @@
   - Telefone
  ```
  
- Projeto Criado com React utilizando suas dependencias e dependencias de terceiros para criação da aplicação.
+ Foi feito o deploy deste Projeto que esta hospedado em: https://webagenda.netlify.app/
+ Projeto esta funcionando e em comunicação perfeita com o Back End que se encontra hospedado em Link da API :https://web-agenda.herokuapp.com/
+ 
+ Projeto Criado com React utilizando suas dependencias e dependencias de terceiros para criação da aplicação onde foi feito o consumo da API que foi criada no projeto
+ do Back End.
  ```
  A Primeira pagina consistem na pagina de Login, onde o usuario falar login e sua autenticação ira passar por um processo de criptografia, onde toda essa confiuração
  foi foita no Projeto "backend-agenda-web" que se encontra em meu Repositorio no GitHub.
