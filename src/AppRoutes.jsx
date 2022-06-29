@@ -20,8 +20,6 @@ const AppRoutes = () => {
 
         return children
     }
-
-
     
     return (
     <AuthProvider>

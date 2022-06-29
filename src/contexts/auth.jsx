@@ -1,5 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom'
+import ClipLoader from "react-spinners/ClipLoader";
+
 
 import { api, createSession } from "../services/api";
 
@@ -17,7 +19,6 @@ export const AuthProvider = ({ children }) => {
         if(recoveredUser && token) {
             setUser(JSON.parse(recoveredUser))
             api.defaults.headers.Authorization = `Bearer ${token}`
-
         }
 
         setLoading(false)
@@ -25,7 +26,6 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (email, password) => {
     const response = await createSession(email, password)
-
 
     const loggedUser = response.data.user
     const token = response.data.token
@@ -48,7 +48,14 @@ export const AuthProvider = ({ children }) => {
     }
 
     if(loading) {
-        return <div className="loading">Carregando dados....</div>
+        return <div className="loading">
+            <ClipLoader
+            color="#2C439C"
+            cssOverride={{}}
+            loading
+            size={64}
+            />
+        </div>
     }
 
     return (
